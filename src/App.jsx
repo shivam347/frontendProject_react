@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import TrustedBy from './components/TrustedBy'
 import Services from './components/Services'
 import OurWork from './components/OurWork'
+import Teams from './components/Teams'
 
 const App = () => {
 
@@ -11,25 +12,15 @@ const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
 
 
-
-  // Apply theme to Tailwind
-  // useEffect(() => {
-  //   if (theme === 'dark') {
-  //     document.documentElement.classList.add('dark')
-  //   } else {
-  //     document.documentElement.classList.remove('dark')
-  //   }
-  // }, [theme])
-
-
   return (
 
     <div className='dark:bg-black relative'>
       <Navbar theme={theme} setTheme={setTheme}/>
       <Hero />
-      <TrustedBy/>
-      <Services/>
-      <OurWork/>
+      <TrustedBy />
+      <Services />
+      <OurWork />
+      <Teams />
 
 
     </div>
